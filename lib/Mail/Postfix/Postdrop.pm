@@ -87,6 +87,14 @@ sub new {
               map { $message->get_header($_) } qw(To Cc Bcc)
         ];
     }
+    
+    if ( exists $overrides{maildrop_queue_dir} ) {
+        $MAILDROP_QUEUE_DIR = $overrides{maildrop_queue_dir};
+    }
+
+    if ( exists $overrides{pickup_service_socket} ) {
+        $PICKUP_SERVICE_SOCKET = $overrides{pickup_service_socket};
+    }
 
     return bless {
         message => $message,
