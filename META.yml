@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Mail-Postfix-Postdrop
-version:             0.2
+version:             0.3
 abstract:            Inject mails to a Postfix maildrop directory
 license:             perl
 author:              
